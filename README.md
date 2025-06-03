@@ -153,7 +153,7 @@ python run.py -s /root/autodl-tmp/roop/resource/IMG_0765.JPG -t /root/autodl-tmp
 #使用了脸部替换以及脸部增强、保持帧率、使用英伟达进行输出、视频质量为80以及使用cuda加速
 ```
 
-
+以下是原作者的项目README内容
 
 ## This project has been discontinued
 
