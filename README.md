@@ -45,7 +45,17 @@ dpkg -l | grep libcudnn
 #显示cudnn版本
 ```
 
-如果都显示出来说明已经安装好cuda环境，roop的这个版本适应于cuda11.8和cudnn8.6版本的环境，最好安装这个版本其他版本可能无法启动cuda加速，网上有安装教程下面仅仅是cudnn的导入指令
+如果都显示出来说明已经安装好cuda环境，roop的这个版本适应于cuda11.8和cudnn8.6版本的环境，最好安装这个版本其他版本可能无法启动cuda加速，可以使用conda在虚拟环境中进行安装相关的cuda和cudnn版本
+
+```shell
+conda install conda-forge::cuda-runtime=11.8.1 conda-forge::cudnn=8.6.0.163
+#安装指定的cuda和cudnn版本
+conda install conda-forge::cuda-runtime=9.8.0.87
+conda install conda-forge::cudnn=9.8.0.87
+#或者进行分步安装，适用于电脑中已经有其中一个驱动的时候
+```
+
+如果下载太慢，可以进行手动安装，网上有安装教程下面仅仅是cudnn的导入指令
 
 ```shell
 tar -xJvf cudnn-linux-x86_64-8.6.0.163_cuda11-archive.tar.xz 
@@ -77,7 +87,8 @@ git clone https://github.com/Dontlikemushroom/roop.git
 sudo apt install python3-pip
 #安装python依赖安装工具
 sudo apt install ffmpeg
-#安装ffmpeg工具
+conda install -y libffi ffmpeg
+#安装ffmpeg工具，或者使用下面的指令实现在conda虚拟环境中进行安装工具
 pip install torch==2.0.1+cu118 torchvision==0.15.2+cu118 torchaudio==2.0.2 --extra-index-url https://download.pytorch.org/whl/cu118
 #安装项目适配的torch相关版本
 pip install -r requirements.txt
