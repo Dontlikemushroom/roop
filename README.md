@@ -164,6 +164,19 @@ python run.py -s /root/autodl-tmp/roop/resource/IMG_0765.JPG -t /root/autodl-tmp
 #使用了脸部替换以及脸部增强、保持帧率、使用英伟达进行输出、视频质量为80以及使用cuda加速
 ```
 
+最后的最后，如果使用该项目结束后需要进行删除文件并且删除磁盘上的文件可以通过以下的工具进行删除
+
+```shell
+apt-get install wipe
+wipe -r /root/autodl-tmp/roop/
+```
+
+这个是window下的操作方式
+
+```cmd
+cipher /w:D\ouputs\
+```
+
 以下是原作者的项目README内容
 
 ## This project has been discontinued
