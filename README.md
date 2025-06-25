@@ -164,6 +164,21 @@ python run.py -s /root/autodl-tmp/roop/resource/IMG_0765.JPG -t /root/autodl-tmp
 #使用了脸部替换以及脸部增强、保持帧率、使用英伟达进行输出、视频质量为80以及使用cuda加速
 ```
 
+最后的最后，如果使用该项目结束后需要进行删除文件并且删除磁盘上的文件可以通过以下的工具进行删除
+
+```shell
+apt-get install wipe
+wipe -r /root/autodl-tmp/roop/
+```
+
+这个是window下的操作方式
+
+```cmd
+cipher /w:D\ouputs\
+```
+
+**注意**：cipher指令只能将磁盘中没有用到的空闲位置进行删除，一般又很可能由于权限原因导致无法实现，所以可以使用filldisk.exe软件进行填充磁盘，通过Recuva软件进行验证是否可以进行磁盘恢复
+
 以下是原作者的项目README内容
 
 ## This project has been discontinued
